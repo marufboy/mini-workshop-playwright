@@ -19,8 +19,8 @@ jobs:
         run: npm ci
       - name: Install Playwright Browsers
         run: npx playwright install --with-deps
-      - name: Run Playwright Login Test
-        run: npx playwright test login.spec.ts --project=chromium
+      - name: Run All Playwright Tests
+        run: npx playwright test --project=chromium
       - uses: actions/upload-artifact@v4
         if: ${{ !cancelled() }}
         with:
